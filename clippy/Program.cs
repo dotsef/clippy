@@ -1,7 +1,9 @@
 ﻿using TextCopy;
 
 var clipboard = new Clipboard();
+
 if (Console.IsInputRedirected)
     clipboard.SetText(Console.In.ReadToEnd());
-else
+
+if (Console.IsOutputRedirected || !Console.IsInputRedirected)
     Console.WriteLine(clipboard.GetText());
