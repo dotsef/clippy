@@ -1,4 +1,4 @@
-name: Publish Squeel
+name: Publish Clippy
 
 on:
   push:
@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  squeel:
+  clippy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
